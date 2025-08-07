@@ -26,6 +26,7 @@ static bool MatchPattern(string inputLine, string pattern)
     return pattern switch
     {
         "\\d" => inputLine.Any(char.IsDigit),
+        "d" => true,
         _ => false
     };
 }
