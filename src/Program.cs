@@ -26,6 +26,7 @@ static bool MatchPattern(string inputLine, string pattern)
     return pattern switch
     {
         "\\d" => inputLine.Any(char.IsDigit),
+        "\\w" => inputLine.All(char.IsLetterOrDigit) || inputLine.Contains('_'),
         "d" => true,
         _ => false
     };
